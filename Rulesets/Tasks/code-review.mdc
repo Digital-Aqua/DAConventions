@@ -1,0 +1,51 @@
+---
+description: "Guidelines for code review, branching, and commit messages."
+globs: ["**/COMMIT_EDITMSG", "**/PULLREQ_EDITMSG"]
+alwaysApply: false
+---
+
+# Code Review and Branching
+
+This document outlines the process for getting code reviewed and merged.
+
+## Branching Strategy
+
+- **Branch Naming**: Use a consistent naming scheme.
+  - Features: `feature/<short-description>`
+  - Fixes: `fix/<short-description>`
+- **`master` Branch**: The `master` branch is the source of truth and should always be stable. Direct pushes are disabled.
+
+## Commit Message Style
+
+- This project follows the [**Conventional Commits**](https://www.conventionalcommits.org/en/v1.0.0/) specification.
+- This creates an explicit and readable commit history.
+
+### Format
+
+The commit message should be structured as follows:
+
+```
+<type>[optional scope]: <description>
+```
+
+- **type**: The type of change (e.g., `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`).
+- **scope** (optional): The part of the codebase affected by the change (e.g., `api`, `ui`, `db`).
+- **description**: A concise, imperative-tense description of the change.
+
+### Examples
+
+- `feat(api): add endpoint for user profiles`
+- `fix(ui): correct button alignment on safari`
+- `docs(readme): update setup instructions`
+
+## Pull Request (PR) Process
+
+- **Self-Review**: Review your own code before requesting a review from others.
+- **Clear Description**: Write a clear and concise PR description explaining the "what" and "why" of the change.
+- **CI Checks**: Ensure all automated checks (tests, linting) are passing before merging.
+
+## Review Expectations
+
+- **Focus**: The primary focus of a review is on correctness, readability, and architectural soundness.
+- **Style**: Do not enforce specific code formatting or style conventions. Adherence to language idioms is encouraged but not required for approval.
+- **Tone**: Be constructive and respectful. Frame feedback as suggestions.

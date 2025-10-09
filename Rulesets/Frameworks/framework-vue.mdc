@@ -1,0 +1,34 @@
+---
+description: "Guidelines for Vue frontend development."
+globs:
+  - "**/*.vue"
+alwaysApply: false
+---
+
+# Vue Guidelines
+
+This document provides guidelines for Vue frontend development.
+
+- **Tech Stack**:
+  - Vue 3
+  - Vite
+
+- **Language**:
+  - All Vue projects must use TypeScript. See the [TypeScript Guidelines](./lang-typescript.md) for details.
+
+- **Directory Structure**:
+  - Do not create an extra `src` subdirectory inside the project folder.
+  - `Components`: Vue components.
+  - `Composables`: Vue composables.
+
+- **Recommended Libraries**:
+  - **Icons**: [Phosphor Icons](https://phosphoricons.com/)
+  - **Components**: [PrimeVue](https://primevue.org/)
+  - **Utilities**: [VueUse](https://vueuse.org/)
+
+- **Editor Extensions**:
+  - **Vue Language Features (Volar)** (`vue.volar`): The official language support for Vue.
+
+- **Testing**:
+  - **Framework**: Use `vitest`.
+  - **Test Location**: Place test files (`*.spec.ts`) alongside the code under test.

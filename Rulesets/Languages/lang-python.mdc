@@ -1,0 +1,60 @@
+---
+description: "Python style guide and conventions."
+globs:
+  - "**/*.py"
+  - "**/*.pyi"
+  - "pyproject.toml"
+alwaysApply: false
+---
+
+# Python Guidelines
+
+This document provides guidelines for Python development.
+
+- **Project Management**:
+  - Use `pyproject.toml` to manage Python packages.
+  - Each package should be in its own subdirectory in `Source/`.
+
+- **Type Checking**:
+  - Use type hints for all code.
+  - Type checking is enforced; code should pass a type checker without errors.
+
+- **Formatting**:
+  - Code formatting is not strictly enforced.
+
+- **Dependency Management**:
+  - The Python environment and its dependencies are managed by Nix.
+  - The primary source of truth for Python packages is `pyproject.toml`.
+  - **To add or update dependencies**:
+    1.  Add the package to the appropriate section in `pyproject.toml`.
+    2.  Nix will automatically pick up the changes and install the packages the next time you enter the development shell (`nix develop`).
+  - **Vetting New Dependencies**: Before adding a new package, please perform a quick check:
+    - Is it the latest stable version?
+    - Is the project actively maintained?
+    - Does it have a compatible license?
+  - **Maintenance**: `flake.nix` and `pyproject.toml` should be kept up-to-date, but no formal review schedule is required.
+
+- **Editor Extensions**:
+  - **Even Better TOML** (`tamasfe.even-better-toml`): Support for `pyproject.toml` and other TOML files.
+  - **Jinja HTML** (`samuelcolvin.jinjahtml`): Syntax highlighting for Jinja templates.
+
+- **Testing**:
+  - **Framework**: Use `pytest`.
+  - **Test Location**: Place test files (`test_*.py`) alongside the code under test.
+  - **Coverage**: Use `pytest-cov` for coverage reporting.
+
+- **Web APIs**:
+  - **Framework**: Use `fastapi`.
+  - **Server**: Use `uvicorn`.
+
+- **Scientific Computing**:
+  - Use Jupyter notebooks (`.ipynb`) for high-level, literate-style work.
+  - Push complex logic into backing Python packages.
+  - Use `%load_ext autoreload` and `%autoreload 2` in notebooks to automatically reload packages.
+
+- **Logging**:
+  - Use the standard library `logging` module for all logging.
+  - Configure logging at the application entry point.
+  - Use appropriate log levels: `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`.
+  - Include contextual information in log messages (user IDs, request IDs, etc. where relevant).
+  - Avoid logging sensitive information (passwords, tokens, PII).

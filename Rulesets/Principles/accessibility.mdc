@@ -1,0 +1,27 @@
+---
+description: "Accessibility standards and guidelines."
+globs:
+  - "**/*.html"
+  - "**/*.vue"
+  - "**/*.tsx"
+  - "**/*.jsx"
+alwaysApply: false
+---
+
+# Accessibility Standards
+
+*This document is a placeholder.*
+
+Future topics to be covered:
+- WCAG compliance level targets (A, AA, or AAA)
+- Semantic HTML requirements
+- ARIA attributes and when to use them
+- Keyboard navigation standards
+- Focus management
+- Color contrast requirements
+- Screen reader testing procedures
+- Alternative text for images and media
+- Form accessibility (labels, error messages, validation)
+- Testing tools and automation (axe, Lighthouse, etc.)
+- Accessibility checklist for code reviews
+

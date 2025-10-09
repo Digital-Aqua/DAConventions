@@ -1,0 +1,24 @@
+---
+description: "Guidelines for using Rust compiled to WebAssembly."
+globs:
+  - "**/*.rs"
+  - "**/Cargo.toml"
+alwaysApply: false
+---
+
+# Rust-WASM Guidelines
+
+This document provides guidelines for using Rust compiled to WebAssembly.
+
+- **Use Case**: For performance-critical code in a web application.
+
+- **Toolchain**:
+  - **Bindings**: Use `wasm-bindgen` for interfacing with JavaScript.
+  - **Build Tool**: Use `wasm-pack` to build the Rust code.
+
+- **Integration**:
+  - Integrate the built WASM files into the parent Vue project.
+  - Do not create a separate top-level directory for the Rust code.
+
+- **Build Artifacts**:
+  - Output build artifacts to subdirectories within the project's `.build` directory.

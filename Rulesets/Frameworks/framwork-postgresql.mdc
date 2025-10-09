@@ -1,0 +1,23 @@
+---
+description: "Guidelines for using PostgreSQL."
+globs:
+  - "**/*.sql"
+alwaysApply: false
+---
+
+# PostgreSQL Guidelines
+
+*This document is a placeholder.*
+
+Future topics to be covered:
+- Connection management and pooling
+- Schema design principles
+- Migration strategy and tooling
+- ORM selection and usage patterns
+- Indexing strategies
+- Query optimization
+- Transaction management
+- Backup and recovery procedures
+- Security and access control
+- Testing with databases (fixtures, mocking, test databases)
+

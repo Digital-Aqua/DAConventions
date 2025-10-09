@@ -1,0 +1,29 @@
+---
+description: "Guidelines for TypeScript development."
+globs:
+  - "**/*.ts"
+  - "**/*.tsx"
+  - "tsconfig.json"
+alwaysApply: false
+---
+
+# TypeScript Guidelines
+
+This document provides guidelines for TypeScript development.
+
+- **Usage**:
+  - TypeScript must be used for all frontend development (e.g., in Vue projects).
+
+- **Configuration**:
+  - Projects should include a `tsconfig.json` file with `strict` mode enabled to enforce strong type-checking.
+
+- **Typing**:
+  - Avoid the use of the `any` type. Prefer explicit types, `unknown`, or generics.
+
+- **Style**:
+  - Code formatting is not strictly enforced, but adherence to standard community practices is encouraged.
+
+- **Logging**:
+  - Use [Adze](https://adzejs.com/) for logging in TypeScript/JavaScript applications.
+  - Configure log levels appropriately for development vs. production environments.
+  - Avoid logging sensitive information (passwords, tokens, PII).

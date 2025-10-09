@@ -1,0 +1,14 @@
+---
+description: "Guidelines for designing APIs."
+alwaysApply: false
+---
+
+# API Design Guide
+
+*This document is a placeholder.*
+
+Future topics to be covered:
+- RESTful APIs
+- Asynchronous messaging patterns (Pub/Sub, Req/Rep)
+- Binary serialization formats
+- Code generation for APIs

@@ -1,0 +1,46 @@
+---
+description: "Guidelines for containerizing services with Docker."
+globs:
+  - "**/Dockerfile"
+  - "**/*.dockerfile"
+  - "docker-compose.yml"
+  - "docker-compose.yaml"
+alwaysApply: false
+---
+
+# Docker Guidelines
+
+This document provides guidelines for containerizing services with Docker.
+
+- **Use Case**: For building microservices.
+
+- **Base Images**:
+  - Prefer `debian-slim` base images.
+  - `alpine` is an acceptable alternative.
+
+- **Build Optimization**:
+  - Use `RUN --mount` for package manager operations to leverage build cache and avoid bloating layers.
+  - For `apt`:
+    ```dockerfile
+    RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+        --mount=type=cache,target=/var/lib/apt,sharing=locked \
+        apt-get update && apt-get install -y <packages>
+    ```
+  - For `pip`:
+    ```dockerfile
+    RUN --mount=type=cache,target=/root/.cache/pip \
+        pip install -r requirements.txt
+    ```
+  - Apply similar patterns for other package managers (npm, cargo, etc.).
+
+- **Networking**:
+  - Use `nginx` for reverse proxying, TLS termination, and static file serving.
+
+- **Python Services**:
+  - Use `uvicorn` as the web server for Python web services.
+
+- **Logging**:
+  - All containerized applications must log to `stdout` and `stderr`.
+  - Do not write logs to files within the container.
+  - Use structured logging where possible (JSON format recommended).
+  - Docker's logging drivers will handle log collection and forwarding.

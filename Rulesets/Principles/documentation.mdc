@@ -1,0 +1,45 @@
+---
+description: "Guidelines for writing documentation."
+globs:
+  - "**/*.md"
+  - "**/*.mdx"
+alwaysApply: false
+---
+
+# Documentation Standards
+
+This document outlines guidelines for writing clear and effective documentation.
+
+## Code Documentation
+
+- **Docstrings**:
+  - No specific format is enforced (Google style, NumPy style, JSDoc, etc. are all acceptable).
+  - Focus on clarity and completeness over strict formatting.
+  - Document the purpose, parameters, return values, and any exceptions/errors for public APIs.
+
+- **Inline Comments**:
+  - Add comments where code is not self-documenting.
+  - Use comments to explain complex algorithms, business logic, or non-obvious implementation details.
+  - Avoid stating the obvious; comments should provide insight that the code alone cannot.
+  - Keep comments up-to-date when code changes.
+
+- **What to Document**:
+  - Complex code blocks that aren't immediately clear.
+  - Workarounds for bugs or limitations in dependencies.
+  - Performance considerations or trade-offs.
+  - Security implications of certain operations.
+  - Assumptions about input data or system state.
+
+- **What Not to Document**:
+  - Self-evident code (e.g., `// increment counter` for `counter++`).
+  - Commented-out code (delete it; it's in version control if needed).
+
+## Project Documentation
+
+At this stage, there are no requirements for:
+- README files (though they are encouraged for complex subprojects).
+- Architecture Decision Records (ADRs).
+- Changelogs.
+
+These may be added as project requirements in the future.
+

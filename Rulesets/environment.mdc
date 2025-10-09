@@ -1,0 +1,38 @@
+---
+description: "How to set up the development environment."
+globs:
+  - "flake.nix"
+  - ".vscode/settings.json"
+alwaysApply: true
+---
+
+# Development Environment
+
+This document explains how to set up the development environment.
+
+## Primary Environment (Nix)
+
+- The development environment is managed by [Nix](https://nixos.org/).
+- All tools and packages are defined in the `flake.nix` file in the workspace root.
+- **To activate the environment**, run the following command in your terminal:
+  ```bash
+  nix develop
+  ```
+- **Secrets**: The Nix environment should be configured to automatically load secrets via `shellHook`. See the [Secrets Management](./secrets-management.mdc) guide for details on how to set up your `.env` and `default.env` files.
+
+## Code Editor
+
+- The preferred code editor is **Cursor** or **VS Code**.
+- A list of recommended extensions is available in `.vscode/extensions.json`.
+
+### General Recommendations
+
+- **Nix IDE** (`jnoortheen.nix-ide`): Language support for Nix files.
+- **Code Spell Checker** (`streetsidesoftware.code-spell-checker`): To catch spelling errors.
+- **chmod** (`dlech.chmod`): To easily change file permissions.
+- **UUID Generator** (`netcorext.uuid-generator`): For generating UUIDs.
+- **XML** (`redhat.vscode-xml`): XML language support.
+
+### Technology-Specific Recommendations
+
+- Language- and technology-specific extensions are listed in their respective guideline documents.

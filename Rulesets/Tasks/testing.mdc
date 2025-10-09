@@ -1,0 +1,43 @@
+---
+description: "The project's philosophy and approach to testing."
+globs:
+  - "**/test_*.py"
+  - "**/*.spec.ts"
+  - "**/*.test.ts"
+alwaysApply: false
+---
+
+# Testing Strategy
+
+This document outlines our philosophy and approach to testing. Our goal is to ensure correctness and reliability through effective, behaviour-focused tests.
+
+## Testing Philosophy
+
+- **Behavioural Testing**: Tests should verify *what* the code does, not *how* it does it.
+- **Focus on Business Logic**: Prioritize testing critical business logic and user-facing functionality.
+- **Test-Driven Approach**: We encourage writing tests alongside or before the implementation code.
+
+## The Testing Pyramid
+
+We follow the standard testing pyramid model to balance our testing efforts:
+
+- **Unit Tests** (Most numerous):
+  - Test a single function, method, or component in isolation.
+  - Should be fast and focused.
+  - Verify that a unit of code behaves correctly given specific inputs.
+
+- **Integration Tests**:
+  - Test how multiple components or services work together.
+  - Slower than unit tests.
+  - Verify the interactions and data flow between parts of the system.
+
+- **End-to-End (E2E) Tests** (Least numerous):
+  - Test a complete user workflow from start to finish.
+  - The slowest and most brittle type of test.
+  - Reserved for critical user paths.
+
+## Code Coverage
+
+- Code coverage is a useful tool for identifying untested parts of the codebase.
+- It is not a primary metric for success. High coverage does not guarantee high-quality tests.
+- The goal is confidence in the code, not a specific coverage percentage.

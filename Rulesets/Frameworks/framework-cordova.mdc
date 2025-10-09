@@ -1,0 +1,17 @@
+---
+description: "Guidelines for Cordova mobile app development."
+alwaysApply: false
+---
+
+# Cordova Guidelines
+
+*This document is a placeholder.*
+
+Future topics to be covered:
+- When to use Cordova for mobile app development
+- Integration with Vue frontend projects
+- Plugin management and selection
+- Platform-specific build configurations
+- Native feature access patterns
+- Testing on physical devices vs. emulators
+- App store deployment considerations

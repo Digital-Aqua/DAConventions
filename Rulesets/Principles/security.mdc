@@ -1,0 +1,82 @@
+---
+description: "Security standards and guidelines."
+alwaysApply: false
+---
+
+# Security Standards
+
+*This document is a work-in-progress. The structure below outlines the key areas to be documented.*
+
+## Authentication
+
+*To be documented:*
+- Which authentication methods are approved? (JWT, OAuth2, session-based, etc.)
+- Token storage and transmission practices
+- Password requirements and hashing strategies
+- Multi-factor authentication requirements
+- Session management and timeout policies
+
+## Authorization
+
+*To be documented:*
+- Authorization model (RBAC, ABAC, or other)
+- How to implement permission checks
+- Service-to-service authorization
+- API key management for external services
+
+## Input Validation and Sanitization
+
+*To be documented:*
+- Where and how to validate user input
+- Sanitization techniques for different contexts (SQL, HTML, etc.)
+- File upload validation and restrictions
+- API request validation patterns
+
+## Common Vulnerabilities
+
+*To be documented:*
+- SQL injection prevention strategies
+- Cross-Site Scripting (XSS) protection
+- Cross-Site Request Forgery (CSRF) protection
+- Clickjacking prevention
+- Server-Side Request Forgery (SSRF) mitigation
+
+## Network Security
+
+*To be documented:*
+- HTTPS/TLS requirements and configuration
+- CORS policy guidelines
+- Content Security Policy (CSP) requirements
+- Rate limiting strategies
+
+## Data Protection
+
+*To be documented:*
+- Encryption at rest requirements
+- Encryption in transit requirements
+- Personally Identifiable Information (PII) handling
+- Data retention and deletion policies
+- Logging of sensitive data (what not to log)
+
+## Dependency Security
+
+*To be documented:*
+- How to scan for vulnerable dependencies
+- Update and patching procedures
+- Approved package sources and registries
+
+## Security Testing
+
+*To be documented:*
+- Security audit requirements
+- Penetration testing schedule and scope
+- Automated security scanning tools
+- Vulnerability disclosure and response process
+
+## Incident Response
+
+*To be documented:*
+- Security incident classification
+- Notification procedures
+- Post-incident review process
+

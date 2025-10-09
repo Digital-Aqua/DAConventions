@@ -1,0 +1,82 @@
+---
+description: "Guidelines for performance optimization."
+alwaysApply: false
+---
+
+# Performance Guidelines
+
+*This document is a work-in-progress. The structure below outlines the key areas to be documented.*
+
+## Performance Philosophy
+
+- **Measure First**: Always profile before optimizing. Premature optimization is the root of all evil.
+- **User-Centric**: Optimize for the user experience, not just raw numbers.
+- **Trade-offs**: Document performance trade-offs (e.g., speed vs. memory, readability vs. efficiency).
+
+## Network Performance
+
+*To be documented:*
+- Bundle size budgets
+- Load time targets
+- Time to Interactive (TTI) goals
+- Lazy loading strategies
+- Code splitting patterns
+- Asset optimization (images, fonts, etc.)
+- Caching strategies (HTTP caching, service workers)
+- CDN usage and configuration
+- API response time targets
+- Compression (gzip, brotli)
+
+## Computational Performance
+
+*To be documented:*
+
+### CPU Optimization
+- Algorithm complexity targets (Big-O considerations)
+- Profiling tools and practices (language-specific)
+- Parallelization strategies (threading, multiprocessing)
+- When to use compiled languages vs. interpreted
+- Hot path optimization
+- Memory allocation patterns
+
+### GPU Optimization
+- When to offload computation to GPU
+- Frameworks and libraries (CUDA, OpenCL, WebGL, etc.)
+- Data transfer optimization (CPU ↔ GPU)
+- Shader optimization for graphics workloads
+- Batch processing strategies
+
+### TPU and Specialized Hardware
+- When to consider TPU or other accelerators
+- Framework support (TensorFlow, PyTorch, JAX)
+- Model optimization for inference
+- Quantization and pruning strategies
+
+## Memory Performance
+
+*To be documented:*
+- Memory usage budgets
+- Garbage collection considerations
+- Memory leak detection and prevention
+- Object pooling and reuse
+- Lazy initialization
+- Streaming large datasets
+
+## Database Performance
+
+*To be documented:*
+- Query optimization guidelines
+- Indexing strategies
+- Connection pooling
+- N+1 query prevention
+- Caching strategies (query results, objects)
+
+## Profiling and Monitoring
+
+*To be documented:*
+- Profiling tools by language/platform
+- When and how to profile
+- Continuous performance monitoring
+- Performance regression detection
+- Alerting on performance degradation
+

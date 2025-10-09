@@ -1,0 +1,20 @@
+---
+description: "Guidelines for C# development."
+globs:
+  - "**/*.cs"
+  - "**/*.csproj"
+alwaysApply: false
+---
+
+# C# Guidelines
+
+*This document is a placeholder.*
+
+Future topics to be covered:
+- Use cases and when to choose C#
+- Framework selection (ASP.NET Core, minimal APIs)
+- Dependency injection patterns
+- Async/await best practices
+- Testing frameworks and strategies
+- Entity Framework or alternative ORMs
+- Configuration management

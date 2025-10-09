@@ -1,0 +1,26 @@
+---
+description: "The project's high-level process and development philosophy."
+alwaysApply: true
+---
+
+# Workflow and Paradigms
+
+This document defines our high-level process and development philosophy.
+
+## Development Process
+
+Follow this process for all new features and significant changes:
+
+1.  **Design**: Plan the public API and overall structure.
+2.  **Write**: Implement the code.
+3.  **Test**: Verify the code's behaviour with unit tests.
+4.  **Refactor**: Iteratively improve code quality.
+5.  **Document**: Add docstrings and update relevant documentation.
+
+## Guiding Principles
+
+- **Ask for Help**: **If you are unsure about something, ask for clarification. The user is available to help, and can provide quick answers! You don't need to solve everything in one shot.**
+- **Typing**: Use strict typing and type hinting where available.
+- **Declarative Style**: Favour declarative programming over imperative where reasonable.
+- **Testing**: Use a behavioural, test-driven approach.
+- **Skipping Tests**: If a test cannot be created quickly and reasonably, it may be skipped. This is preferable to an inadequate test.

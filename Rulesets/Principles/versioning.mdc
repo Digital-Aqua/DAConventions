@@ -1,0 +1,22 @@
+---
+description: "The project's versioning and release process."
+alwaysApply: false
+---
+
+# Versioning and Release Process
+
+*This document is a placeholder.*
+
+No formal versioning strategy is currently in use.
+
+Future topics to be covered:
+- Semantic versioning (SemVer) adoption
+- Version numbering scheme
+- Release cadence and schedule
+- Changelog generation (manual vs. automated)
+- Tagging strategy in Git
+- Hotfix procedures
+- Pre-release and beta versioning
+- Deprecation policy
+- API versioning for breaking changes
+

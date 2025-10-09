@@ -1,0 +1,37 @@
+---
+description: "Guidelines for managing application state."
+alwaysApply: false
+---
+
+# State Management Guidelines
+
+This document provides guidelines for managing application state.
+
+## Frontend State Management
+
+- **Framework**: Use [Pinia](https://pinia.vuejs.org/) for Vue applications.
+
+- **When to Use Pinia**:
+  - For state that needs to be shared across multiple components.
+  - For complex state with multiple actions and getters.
+  - For state that persists across route changes.
+
+- **When Not to Use Pinia**:
+  - For component-local state (use `ref` or `reactive` instead).
+  - For simple parent-child communication (use props and events).
+
+- **Best Practices**:
+  - Keep stores focused and modular; avoid large monolithic stores.
+  - Use TypeScript for type-safe store definitions.
+  - Avoid direct state mutation outside of actions where possible.
+
+## Backend State Management
+
+*To be determined.*
+
+Future considerations:
+- In-memory state vs. persistent state
+- Caching strategies
+- Session management
+- Distributed state in microservices
+

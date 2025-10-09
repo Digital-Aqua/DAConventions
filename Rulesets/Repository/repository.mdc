@@ -1,0 +1,21 @@
+---
+description: "An explanation of the monorepo layout."
+alwaysApply: false
+---
+
+# Repository Structure
+
+This project uses a `git` monorepo.
+
+## Top-Level Directories
+
+- **`.build`**: (Git-ignored) Build artifacts.
+- **`.scratch`**: (Git-ignored) Notes, deprecated code, and other temporary files.
+- **`Docs`**: Project documentation (you are here).
+- **`External`**: External dependencies, often included as git submodules.
+- **`Source`**: All source code.
+
+## Subprojects
+
+- Each subproject is a subdirectory within `Source/`.
+- This may be a single-level or multi-level directory structure.
