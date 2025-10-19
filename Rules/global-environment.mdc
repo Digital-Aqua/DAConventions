@@ -14,10 +14,8 @@ This document explains how to set up the development environment.
 
 - The development environment is managed by [Nix](https://nixos.org/).
 - All tools and packages are defined in the `flake.nix` file in the workspace root.
-- **To activate the environment**, run the following command in your terminal:
-  ```bash
-  nix develop
-  ```
+- **To activate the environment**, run `nix develop --impure -c <my-command>` in your terminal.
+
 - **Secrets**: The Nix environment should be configured to automatically load secrets via `shellHook`. See the [Secrets Management](./secrets-management.mdc) guide for details on how to set up your `.env` and `default.env` files.
 
 ## Code Editor

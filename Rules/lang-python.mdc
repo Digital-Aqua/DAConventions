@@ -27,7 +27,7 @@ This document provides guidelines for Python development.
   - The primary source of truth for Python packages is `pyproject.toml`.
   - **To add or update dependencies**:
     1.  Add the package to the appropriate section in `pyproject.toml`.
-    2.  Nix will automatically pick up the changes and install the packages the next time you enter the development shell (`nix develop`).
+    2.  Nix will automatically pick up the changes and install the packages the next time you enter the development shell (`nix develop --impure -c <my-command>`).
   - **Vetting New Dependencies**: Before adding a new package, please perform a quick check:
     - Is it the latest stable version?
     - Is the project actively maintained?
